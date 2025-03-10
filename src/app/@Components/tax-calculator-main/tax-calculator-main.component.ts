@@ -74,6 +74,7 @@ export class TaxCalculatorMainComponent {
           this.isClicked = true;
         },
         (error) => { 
+          this.loading = false;
           throw new Error(error); // handled by GlobalErrorHandler service
         },
         () => { 
