@@ -1,0 +1,28 @@
+<div class="container">
+    <form [formGroup]="incomeTaxForm" (ngSubmit)="onSubmit()" class="form-container">
+        <mat-label>Gross Annual Salary:</mat-label>
+        <mat-form-field>
+            <input matInput min="1" type="number" class="right-align" id="annualGrossSalary" formControlName="annualGrossSalary" placeholder="0">
+            <span matTextPrefix>£&nbsp;</span>
+            @if (f['annualGrossSalary'].invalid && !f['annualGrossSalary'].hasError('required')){
+                <mat-error>Please enter a valid number</mat-error>
+            }
+            @if (f['annualGrossSalary'].hasError('required')) {
+                <mat-error>Gross annual salary is required</mat-error>
+            }
+        </mat-form-field>
+        <button type="submit" class="btn-calculate" mat-raised-button [disabled]="loading || f['annualGrossSalary'].invalid">Calculate
+            @if(loading){
+                <mat-progress-spinner class="mat-spinner"
+                    [mode]="spinnerMode"
+                    strokeWidth="1.5"
+                    diameter="20">
+                </mat-progress-spinner>
+            }
+        </button>
+    </form>
+
+    @if (isClicked){
+        <app-tax-calculator-result [incomeTax] ="incomeTaxCalculationSignal()"></app-tax-calculator-result>
+    }
+</div>

@@ -1,12 +1,16 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { TaxCalculatorMainComponent } from './@Components/tax-calculator-main/tax-calculator-main.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [
+    TaxCalculatorMainComponent
+  ],
+  providers: [],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
+
 export class AppComponent {
-  title = 'Cofy.IncomeTaxCalculator';
+  title = 'Income Tax Calculator';
 }

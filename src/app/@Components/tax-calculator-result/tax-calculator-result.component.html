@@ -1,0 +1,29 @@
+<div class="flex-box">
+    <mat-label class="flex-item-label">Gross Annual Salary:</mat-label>
+    <mat-label class="flex-item-value">{{incomeTax.grossAnnualSalary | CurrencyPound}}</mat-label>
+</div>
+<div class="flex-box">
+    <mat-label class="flex-item-label">Gross Monthly Salary:</mat-label>
+    <mat-label class="flex-item-value">{{incomeTax.grossMonthlySalary | CurrencyPound}}</mat-label>
+</div>
+<div class="flex-box">
+    <mat-label class="flex-item-label">Net Annual Salary:</mat-label>
+    <mat-label class="flex-item-value">{{incomeTax.netAnnualSalary | CurrencyPound}}</mat-label>
+</div>
+<div class="flex-box">
+    <mat-label class="flex-item-label">Net Monthly Salary:</mat-label>
+    <mat-label class="flex-item-value">{{incomeTax.netMonthlySalary | CurrencyPound}}</mat-label>
+</div>
+<div class="flex-box">
+    <mat-label class="flex-item-label">Annual Tax Paid:</mat-label>
+    <mat-label class="flex-item-value">{{incomeTax.annualTaxPaid | CurrencyPound}}</mat-label>
+</div>
+<div class="flex-box">
+    <mat-label class="flex-item-label">Monthly Tax Paid:</mat-label>
+    <mat-label class="flex-item-value">{{incomeTax.monthlyTaxPaid | CurrencyPound}}</mat-label>
+</div>
+<div class="flex-box">
+    <mat-label class="flex-item-label">Tax Percent:</mat-label>
+    <mat-label class="flex-item-value">% {{incomeTax.incomeTaxPercent}}</mat-label>
+</div>
+

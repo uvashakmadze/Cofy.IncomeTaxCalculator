@@ -1,0 +1,10 @@
+.flex-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    column-gap: 10px;
+
+    .flex-item-label{
+        width:200px;
+    }
+}

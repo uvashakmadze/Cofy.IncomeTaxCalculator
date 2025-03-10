@@ -1,0 +1,40 @@
+.container{
+    padding: 15px;
+    margin-top: 15px;
+    border: 1.5px solid #E5E5E5;
+
+    .form-container {
+        .btn-calculate{
+            position: relative;
+            width: 120px;
+
+            .mat-spinner{
+                position: absolute;
+                top:0;
+                left: -25px;
+            }
+        }
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: baseline;
+        gap: 10px;
+    }
+    
+    .form-container mat-form-field + mat-form-field {
+        margin-left: 8px;
+      }
+      
+      .right-align {
+        text-align: right;
+      }
+      
+      input.right-align::-webkit-outer-spin-button,
+      input.right-align::-webkit-inner-spin-button {
+        display: none;
+      }
+      
+      input.right-align {
+        -moz-appearance: textfield;
+      }
+}
