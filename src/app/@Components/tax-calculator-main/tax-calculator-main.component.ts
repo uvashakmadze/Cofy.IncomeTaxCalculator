@@ -5,7 +5,6 @@ import {MatFormFieldModule, MatLabel} from '@angular/material/form-field';
 import {MatButtonModule} from '@angular/material/button';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { TaxCalculatorResultComponent } from '../tax-calculator-result/tax-calculator-result.component';
-import { delay } from 'rxjs';
 import { MatProgressSpinner, ProgressSpinnerMode } from '@angular/material/progress-spinner';
 
 @Component({
@@ -67,7 +66,7 @@ export class TaxCalculatorMainComponent {
 
   fetchData(annualGrossSalary: number): void{
     this.loading = true;
-    this.apiService.Post(annualGrossSalary, this.ResourceUrl).pipe(delay(2000))
+    this.apiService.Post(annualGrossSalary, this.ResourceUrl)
       .subscribe(value =>
         {
           this.incomeTaxCalculationSignal.set(value);

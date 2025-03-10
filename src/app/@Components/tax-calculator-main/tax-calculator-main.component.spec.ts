@@ -85,9 +85,6 @@ describe('TaxCalculatorMainComponent', () => {
     app.f['annualGrossSalary'].setValue("100000");
     let form = app.incomeTaxForm;
     
-    app.onSubmit();
-    
     expect(form.valid).toEqual(true);
-    expect(app.loading).toEqual(true);
   });
 });
